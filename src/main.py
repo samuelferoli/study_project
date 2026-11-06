@@ -9,10 +9,7 @@ json_path = RAW_DATA_DIR / "transactions.json"
 
 json_return = read_json_file(json_path)
 
-users = set()
-
-for row in json_return:
-    users.add(row["user_id"])
+users = {row["user_id"] for row in json_return}
 
 print(users)
 
@@ -22,3 +19,8 @@ for row in json_return:
         total_brl += row["amount"]
 
 print(total_brl)
+
+total_brl = sum(
+    row["amount"] 
+    for row in json_return 
+    if row["currency"] == "BRL" and row["status"] == "completed")

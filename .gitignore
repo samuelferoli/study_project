@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Tool & Editor configurations
+.claude/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Data directories (do not commit raw or processed datasets to Git)
+data_raw/*
+!data_raw/.gitkeep
+data_clean/*
+!data_clean/.gitkeep
